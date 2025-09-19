@@ -1,0 +1,160 @@
+/* 🌆 Background with teal-purple-peach gradient */
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #20c997, #6f42c1, #f783ac);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* 🔹 Container */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 🟪 Card */
+.login-card {
+  background: #fdfcfa;
+  padding: 40px 35px;
+  border-radius: 20px;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
+  width: 380px;
+  text-align: center;
+  animation: fadeIn 0.8s ease-in-out;
+  position: relative;
+  overflow: hidden;
+}
+
+/* ✨ Glow border effect */
+.login-card::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  background: linear-gradient(45deg, #20c997, #6f42c1, #f783ac);
+  z-index: -1;
+  filter: blur(14px);
+  opacity: 0.85;
+}
+
+/* 🏷️ Heading */
+.login-heading {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 25px;
+  color: #3c2a4d;
+}
+
+/* 📋 Form groups */
+.form-group {
+  margin-bottom: 18px;
+  text-align: left;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #5c3c58;
+}
+
+/* 📝 Input fields */
+.form-input {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #c4a1ff;
+  border-radius: 10px;
+  outline: none;
+  transition: 0.3s;
+  font-size: 14px;
+  background: #fffafc;
+}
+
+.form-input:focus {
+  border-color: #20c997;
+  box-shadow: 0 0 8px rgba(32, 201, 151, 0.6);
+}
+
+/* 🔒 Password wrapper */
+.password-wrapper {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.password-toggle {
+  position: absolute;
+  right: 15px;
+  cursor: pointer;
+  color: #6f42c1;
+  font-size: 14px;
+}
+
+/* ⚧️ Radio buttons */
+.radio-options {
+  display: flex;
+  gap: 15px;
+  font-size: 14px;
+  color: #3c2a4d;
+}
+
+/* ✅ Checkbox */
+#remember-group {
+  font-size: 14px;
+  color: #3c2a4d;
+}
+
+/* 🔘 Button */
+.login-btn {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(45deg, #20c997, #6f42c1, #f783ac);
+  border: none;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 12px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: all 0.3s ease;
+}
+
+.login-btn:hover {
+  background: linear-gradient(45deg, #f783ac, #6f42c1, #20c997);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+}
+
+/* 📝 Signup link */
+.signup-text {
+  margin-top: 18px;
+  font-size: 14px;
+  color: #5c3c58;
+}
+
+.signup-link {
+  color: #20c997;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.signup-link:hover {
+  text-decoration: underline;
+  color: #6f42c1;
+}
+
+/* ✨ Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
