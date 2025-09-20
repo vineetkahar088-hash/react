@@ -1,0 +1,142 @@
+/* 
+
+
+:root {
+  --bg: #eef2f9;
+  --card: #ffffff;
+  --accent: #6366f1; 
+  --accent2: #3b82f6; 
+  --muted: #6b7280;
+  --radius: 14px;
+  --shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  --gap: 16px;
+  --pad: 22px;
+  --text: #1f2937;
+  --gradient: linear-gradient(135deg, var(--accent), var(--accent2));
+}
+
+* {
+  box-sizing: border-box;
+}
+html,
+body,
+#root {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: 'Inter', system-ui, Arial, sans-serif;
+  background: linear-gradient(160deg, #eef2f9, #e0e7ff);
+  color: var(--text);
+  transition: background 0.5s ease-in-out;
+}
+
+.form-container {
+  max-width: 760px;
+  margin: 48px auto;
+  padding: var(--pad);
+  background: var(--card);
+  border-radius: calc(var(--radius) + 6px);
+  box-shadow: var(--shadow);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--gap);
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+.form-header {
+  grid-column: 1 / -1;
+  margin-bottom: 12px;
+  text-align: center;
+}
+.form-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.form-sub {
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+input {
+  padding: 12px 14px;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  font-size: 0.95rem;
+  outline: none;
+  transition: 0.25s ease;
+  background: #f9fafb;
+}
+input:focus {
+  border-color: var(--accent2);
+  box-shadow: 0 4px 16px rgba(99, 102, 241, 0.2);
+  transform: translateY(-1px);
+}
+
+.btn-row {
+  grid-column: 1 / -1;
+  display: flex;
+  gap: 14px;
+  justify-content: flex-end;
+}
+.btn {
+  padding: 12px 18px;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 0.95rem;
+  border: none;
+  transition: 0.25s ease-in-out;
+}
+.btn-primary {
+  background: var(--gradient);
+  color: white;
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.4);
+}
+.btn-primary:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(59, 130, 246, 0.5);
+}
+.btn-ghost {
+  background: transparent;
+  color: var(--muted);
+  border: 1px solid #e5e7eb;
+}
+.btn-ghost:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  transform: scale(1.03);
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 720px) {
+  .form-container {
+    grid-template-columns: 1fr;
+    margin: 20px;
+  }
+  .btn-row {
+    flex-direction: column-reverse;
+  }
+  .btn {
+    width: 100%;
+  }
+}
+ */
