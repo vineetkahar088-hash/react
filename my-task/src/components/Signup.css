@@ -1,0 +1,39 @@
+
+
+
+.Login-parent{
+   width: 50%;
+   margin: auto;
+   box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+   border-radius: 20px;
+
+  
+}
+
+.login-child{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding-bottom: 30px;
+}
+
+.login-child input{
+    width: 60%;
+    height: 35px;
+    border-radius: 5px;
+}
+.login-child h3{
+    font-size: 40px;
+    font-weight: 400;
+}
+.create-account{
+    width: 60%;
+    height: 35px;
+    font-size: 20px;
+    color: white;
+    background-color: blue;
+    border-radius: 5px;
+}
+
