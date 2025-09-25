@@ -1,0 +1,222 @@
+
+
+/* Overall Container */
+.laptop-detail-container {
+  width: 92%;
+  max-width: 1280px;
+  margin: 2rem auto;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #2c2c2c;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Laptop Header Section */
+.laptop-header {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 2.5rem;
+  background: linear-gradient(135deg, #007bff, #00c6ff);
+  padding: 1.5rem 2rem;
+  border-radius: 18px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+  color: #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.laptop-header:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.laptop-header img.laptop-image {
+  width: 240px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 14px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  animation: zoomIn 1s ease;
+}
+
+/* Zoom animation */
+@keyframes zoomIn {
+  from { transform: scale(0.9); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.laptop-header h1 {
+  margin: 0;
+  font-size: 2.3rem;
+  font-weight: 700;
+}
+
+.laptop-header p {
+  margin-top: 0.6rem;
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+/* Section Title */
+h2 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-size: 1.6rem;
+  font-weight: 600;
+  border-left: 6px solid #ff6b6b;
+  padding-left: 0.75rem;
+  color: #ff6b6b;
+  animation: slideIn 0.8s ease;
+}
+
+/* Slide animation */
+@keyframes slideIn {
+  from { opacity: 0; transform: translateX(-20px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+/* Product Layout */
+.product-grid,
+.product-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.product-grid {
+  justify-content: flex-start;
+}
+
+.product-row {
+  overflow-x: auto;
+  flex-wrap: nowrap;
+  padding-bottom: 1rem;
+  scroll-behavior: smooth;
+}
+
+/* Product Card */
+.product-card {
+  background: linear-gradient(135deg, #ffffff, #f9f9ff);
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  width: 200px;
+  min-width: 200px;
+  text-align: center;
+  padding: 1.4rem 1rem;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  position: relative;
+  animation: fadeUp 0.8s ease-in-out;
+}
+
+/* FadeUp animation */
+@keyframes fadeUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.product-card:hover {
+  transform: translateY(-8px) scale(1.05);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  background: linear-gradient(135deg, #e3f2fd, #f1f8ff);
+}
+
+.product-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 0.8rem;
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover img {
+  transform: scale(1.08);
+}
+
+.product-card h3 {
+  font-size: 1.1rem;
+  margin: 0.5rem 0 0.3rem;
+  font-weight: 600;
+  color: #222;
+}
+
+.product-card p {
+  margin: 0.3rem 0;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* Animated badge (optional for highlight) */
+.product-card::after {
+  content: "🔥 Hot";
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: #ff4757;
+  color: #fff;
+  font-size: 0.7rem;
+  padding: 0.2rem 0.6rem;
+  border-radius: 12px;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+}
+
+.product-card:hover::after {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Scrollbar Styling */
+.product-row::-webkit-scrollbar {
+  height: 6px;
+}
+
+.product-row::-webkit-scrollbar-thumb {
+  background: #007bff;
+  border-radius: 3px;
+}
+
+.product-row::-webkit-scrollbar-track {
+  background: #f0f0f0;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .laptop-header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .laptop-header img.laptop-image {
+    width: 100%;
+    height: auto;
+  }
+
+  .product-card {
+    width: 160px;
+    min-width: 160px;
+  }
+}
+
+@media (max-width: 600px) {
+  .laptop-detail-container {
+    width: 95%;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+  }
+
+  .product-card {
+    width: 140px;
+    min-width: 140px;
+    padding: 1rem;
+  }
+}
